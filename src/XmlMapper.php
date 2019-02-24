@@ -27,11 +27,13 @@ class XmlMapper
                 $entity->{$propertyName} = $element;
             }
             elseif ($property->isEntityList()) {
-                $childEntities = &$entity->{$propertyName} ?: [];
+                $childEntities = $entity->{$propertyName} ?: [];
 
                 $childEntityClassName = str_replace(['[', ']'], '', $property->type);
 
                 $childEntities[] = $this->map($element, $childEntityClassName);
+
+                $entity->{$propertyName} = $childEntities;
             }
             elseif ($property->isEntity()) {
                 $childEntity = $this->map($element, $property->type);
