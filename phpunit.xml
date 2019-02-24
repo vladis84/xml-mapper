@@ -9,6 +9,17 @@
         failOnRisky="true"
         failOnWarning="true"
 >
+    <groups>
+        <include>
+            <group>unit</group>
+            <group>integration</group>
+        </include>
+    </groups>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src</directory>
+        </whitelist>
+    </filter>
     <testsuites>
         <testsuite name="main">
             <directory>tests</directory>

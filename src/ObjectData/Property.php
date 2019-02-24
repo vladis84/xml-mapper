@@ -22,13 +22,12 @@ class Property
     public function isEntityList(): bool
     {
         $isArray   = strpos($this->type, '[]') > 0;
-        $className = str_replace(['[', ']'], '', $this->type);
 
-        return $isArray && class_exists($className);
+        return $isArray;
     }
 
     public function isEntity(): bool
     {
-        return class_exists($this->type);
+        return !in_array($this->type, PropertyTypeEnum::getList());
     }
 }

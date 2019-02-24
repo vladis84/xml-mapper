@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Root>
+    <Amount>2737.10</Amount>
+    <Passenger>
+        <Name>John Dou</Name>
+        <Document>
+            <Type>Passport RU</Type>
+            <Number>6505 123456</Number>
+        </Document>
+    </Passenger>
+    <Passenger>
+        <Name>First_name Last_name</Name>
+    </Passenger>
+</Root>
