@@ -21,7 +21,7 @@ class Property
 
     public function isEntityList(): bool
     {
-        $isArray   = strpos($this->type, '[]') > 0;
+        $isArray = strpos($this->type, '[]') > 0;
 
         return $isArray;
     }
