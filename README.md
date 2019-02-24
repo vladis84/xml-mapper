@@ -19,6 +19,41 @@ Entity fill from SimpleXml.
 </Root>
 ```
 ```php
+
+class Entity
+{
+    /**
+     * @var float
+     */
+    public $Amount;
+
+    /**
+     * @var Passenger[]
+     */
+    public $Passenger;
+
+    public function method()
+    {
+        
+    }
+}
+
+class Passenger
+{
+    public $Name;
+
+    /**
+     * @var Document
+     */
+    public $Document;
+}
+
+class Document
+{
+    public $Type;
+    public $Number;
+}
+
 $xml = new \SimpleXMLElement('...');
 
 $mapper = new XmlMapper();
