@@ -1,0 +1,25 @@
+{
+  "name": "vladis84/xml_mapper",
+  "description": "XML mapper",
+  "minimum-stability": "stable",
+  "license": "mit",
+  "authors": [
+    {
+      "name": "Gordienko Vladislav",
+      "email": "gordienkoVladis@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "XmlMapper\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "XmlMapperTest\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8"
+  }
+}
